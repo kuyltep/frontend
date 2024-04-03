@@ -1,7 +1,5 @@
 import { Button, TextField, Typography } from "@mui/material";
-import React from "react";
-
-const LoginPage = () => {
+const RegisterPage = () => {
   return (
     <>
       <Typography
@@ -13,7 +11,7 @@ const LoginPage = () => {
         variant="h2"
         component="h2"
       >
-        Авторизация
+        Регистрация
       </Typography>
       <Typography
         sx={{
@@ -23,8 +21,26 @@ const LoginPage = () => {
         }}
         variant="body1"
       >
-        Введите ваш логин и пароль
+        Введите данные для регистрации
       </Typography>
+      <TextField
+        sx={{
+          marginBottom: 3,
+        }}
+        fullWidth={true}
+        label="Name"
+        variant="outlined"
+        placeholder="Введите вашу имя"
+      />
+      <TextField
+        sx={{
+          marginBottom: 3,
+        }}
+        fullWidth={true}
+        label="Username"
+        variant="outlined"
+        placeholder="Введите ваш username"
+      />
       <TextField
         sx={{
           marginBottom: 3,
@@ -44,6 +60,16 @@ const LoginPage = () => {
         variant="outlined"
         placeholder="Введите ваш пароль"
       />
+      <TextField
+        sx={{
+          marginBottom: 3,
+        }}
+        type="password"
+        fullWidth={true}
+        label="Password"
+        variant="outlined"
+        placeholder="Повторите ваш пароль"
+      />
       <Button
         sx={{
           fontFamily: "Popins",
@@ -52,13 +78,13 @@ const LoginPage = () => {
         }}
         variant="contained"
       >
-        ВОЙТИ
+        ЗАРЕГЕСТРИРОВАТЬСЯ
       </Button>
       <Typography variant="body1" sx={{ fontFamily: "Popins" }}>
-        У вас нет аккаунта? <span className="insitingText">Регистрация</span>
+        У вас есть аккаунт? <span className="insitingText">Авторизация</span>
       </Typography>
     </>
   );
 };
 
-export default LoginPage;
+export default RegisterPage;
